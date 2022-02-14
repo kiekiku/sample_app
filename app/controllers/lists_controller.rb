@@ -10,10 +10,11 @@ class ListsController < ApplicationController
   end
   
   def index
-    @lists= List.all
+    @lists = List.all #レコードを複数取得するので複数形のlists
   end
 
   def show
+    @list = List.find(params[:id]) #レコードを一つだけ取得するので単数系のlist
   end
 
   def edit

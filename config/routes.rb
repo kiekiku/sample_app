@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   get 'top' => 'homes#top'
   post 'lists' => 'lists#create'
   get 'lists' => 'lists#index'
+  get 'lists/:id'=>'lists/#show'
   
 end
