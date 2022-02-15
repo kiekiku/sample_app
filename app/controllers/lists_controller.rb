@@ -12,7 +12,7 @@ class ListsController < ApplicationController
   end
   
   def index
-     @lists = List.all #レコードを複数取得するので複数形のlists
+    @lists = List.all  
   end
 
   def show
@@ -31,6 +31,6 @@ class ListsController < ApplicationController
   
  private
   def list_params
-    params.require(:list).permit(:title,:body)
+    params.require(:list).permit(:title, :body, :image)  
   end
 end
